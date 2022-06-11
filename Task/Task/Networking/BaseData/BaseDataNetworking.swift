@@ -10,48 +10,57 @@ import Alamofire
 
 enum BaseDataNetwroking {
     case getData
+    
 }
 
 extension BaseDataNetwroking : TargetType {
-    var baseUrl: String {
-        switch self {
-        default :
-                return "http://satafood.codesroots.com:3000/api/branches/homepage"
-
-        }
-    }
     
-    var path: String {
+    var baseUrl: String {
+        
+        get { return  "http://satafood.codesroots.com:3000/api/branches/homepage" }
+        set { }
+    
+        }
+        
+        var path: String {
         switch self {
         case .getData:
-            return ""
-       
-
+        return ""
+        
+        
         }
-    }
-    
-    var method: HTTPMethod {
+        }
+        
+        var method: HTTPMethod {
         switch self  {
         case .getData :
-            return .get
-            
-     
+        return .get
+        
+        
         }
-    }
-    
-    var task: Task {
+        }
+        
+        var task: Task {
         switch self {
         case .getData:
-            return .requestPlain
-       
+        return .requestPlain
+        
         }
-    }
-    
-    var headers: [String : String]? {
+        }
+        
+        var headers: [String : String]? {
         return [:]
+        }
+        
+        
     }
-    
-    
-}
+
+
+
+
+
+
+
+
 
 

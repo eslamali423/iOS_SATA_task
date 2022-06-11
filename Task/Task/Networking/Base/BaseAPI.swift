@@ -16,6 +16,7 @@ class BaseAPI <T: TargetType> {
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let params = buildPrams(task: target.task)
         let url = target.baseUrl + target.path
+        
         AF.request(url, method: method, parameters: params.0, encoding: params.1, headers: headers).responseJSON { (response) in
             
             guard let statusCode = response.response?.statusCode else {
@@ -49,13 +50,10 @@ class BaseAPI <T: TargetType> {
                 // add custom Error
                 completion(.failure(NSError()))
             }
-            
         }
-        
-        
+
     }
-    
-    
+
     private func buildPrams(task : Task) -> ([String:Any], ParameterEncoding) {
         switch task {
         
