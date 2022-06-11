@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     
+    //MARK:- Vars
     
     static let identifier = "CategoryCollectionViewCell"
+   
+    
     
     private let CategoryImageView : UIImageView = {
        let image = UIImageView()
@@ -81,6 +85,17 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
         ])
     }
+    
+    //MARK:- Cell Configuration with Models
+    public func configureCell(model : Category) {
+        self.titleLabel.text = model.name
+        let url = URL(string: "\(Constants.baseUrl)\(model.photo)")
+        self.CategoryImageView.sd_setImage(with: url, completed: nil)
+        
+        
+    }
+    
+  
     
     
     

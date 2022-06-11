@@ -1,0 +1,75 @@
+
+{
+   "categories":[
+      {
+         "name":"Restaurants",
+         "photo":"uploads/cities/img-1644942869302-569069589.png",
+         "id":7
+      },
+      {
+         "name":"Markets",
+         "photo":"uploads/cities/img-1644942901696-746859036.png",
+         "id":25
+      },
+      {
+         "name":"meat",
+         "photo":"uploads/cities/img-1650248403934-153642720.png",
+         "id":26
+      },
+      {
+         "name":"spring rolls",
+         "photo":"uploads/cities/img-1648946530391-160339728.jpg",
+         "id":33
+      }
+   ],
+   "sliders":[
+      {
+         "photo":"uploads/cuisines/img-1643570278096-339949979.jpg"
+      },
+      {
+         "photo":"uploads/cuisines/img-1648218809168-725244355.png"
+      },
+      {
+         "photo":"uploads/cuisines/img-1648952116040-771975391.jpg"
+      },
+      {
+         "photo":"uploads/cuisines/img-1652901553716-365926360.png"
+      }
+   ],
+   "newoffers":[
+      {
+         "name":"zacks",
+         "RestauranthId":2,
+         "description":"10% discount for all orders",
+         "cover":"uploads/cities/img-1649197586150-157520120.jpeg",
+         "cuisines":[
+            {
+               "name":"salads"
+            },
+            {
+               "name":"fastfood"
+            },
+            {
+               "name":"sushi"
+            },
+            {
+               "name":"fastfood"
+            }
+         ]
+      },
+      {
+         "name":"bazooka",
+         "RestauranthId":5,
+         "description":"شسي",
+         "cover":"uploads/cities/img-1654176257132-998432159.jpeg",
+         "cuisines":[
+            {
+               "name":"fried checkin"
+            },
+            {
+               "name":"salads"
+            }
+         ]
+      }
+   ]
+}
