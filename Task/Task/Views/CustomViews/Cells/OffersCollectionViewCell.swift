@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 
+@available(iOS 13.0, *)
 class OffersCollectionViewCell: UICollectionViewCell {
    
     
@@ -77,7 +78,7 @@ class OffersCollectionViewCell: UICollectionViewCell {
         label.adjustsFontSizeToFitWidth = false
         label.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 0.4213576159)
         label.layer.cornerRadius = 10
-   //     label.frame = CGRect(x:0,y:0,width:label.intrinsicContentSize.width,height:label.intrinsicContentSize.height)
+   
 
         return label
     }()
@@ -98,7 +99,7 @@ class OffersCollectionViewCell: UICollectionViewCell {
         fatalError()
     }
     
-    
+    //MARK:- Layouts and Constraints
     private func setupLayouts(){
         contentView.addSubview(offertImageView)
         contentView.addSubview(nameLabel)
@@ -138,11 +139,11 @@ class OffersCollectionViewCell: UICollectionViewCell {
         
     }
     
-    
+    //MARK:- Cell Conifguration With Model
     func configureCell(model : Offer){
         
         DispatchQueue.main.async { [weak self] in
-            var x :[Cusin] = []
+          
             let url = URL(string: "\(Constants.baseUrl)\(model.cover)")
             self?.offertImageView.sd_setImage(with: url, completed: nil)
             

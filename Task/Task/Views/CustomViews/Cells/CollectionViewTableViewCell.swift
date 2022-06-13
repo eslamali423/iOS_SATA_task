@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class CollectionViewTableViewCell: UITableViewCell {
     
     //MARK:- Vars
@@ -18,11 +19,7 @@ class CollectionViewTableViewCell: UITableViewCell {
     var sliders : [Slider] = []
     var newoffers : [Offer] = []
     var tabelViewIndexPath : IndexPath?
-    
-    enum data {
-        
-    }
-    
+  
     
     private let titleLabel : UILabel = {
         let label =  UILabel()
@@ -104,6 +101,7 @@ class CollectionViewTableViewCell: UITableViewCell {
 
 
 //MARK:- Extension for CollectionView Functions
+@available(iOS 13.0, *)
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

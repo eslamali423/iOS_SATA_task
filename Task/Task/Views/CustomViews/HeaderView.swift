@@ -7,12 +7,12 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
+
 class HeaderView: UIView{
 
    
     //MARK:- Vars
-  
-    
     private let HeaderImageView : UIImageView = {
        let image = UIImageView()
         image.contentMode = .scaleToFill
@@ -100,6 +100,9 @@ class HeaderView: UIView{
         fatalError()
     }
 
+    
+    
+    //MARK:- Layouts and Constraints 
     private func setupLayouts(){
         addSubview(HeaderImageView)
         addSubview(welcomeLabel)

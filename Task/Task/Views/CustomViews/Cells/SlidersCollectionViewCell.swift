@@ -8,10 +8,10 @@
 import UIKit
 import SDWebImage
 
+@available(iOS 13.0, *)
 class SlidersCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "SlidersCollectionViewCell"
-
     private let offertImageView : UIImageView = {
        let image = UIImageView()
         image.contentMode = .scaleToFill
