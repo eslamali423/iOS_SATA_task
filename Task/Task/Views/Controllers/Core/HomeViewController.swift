@@ -7,6 +7,8 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
+
 class HomeViewController: UIViewController {
     
     //MARK:- Vars
@@ -38,8 +40,7 @@ class HomeViewController: UIViewController {
         
         
     }
-    
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
@@ -83,6 +84,7 @@ class HomeViewController: UIViewController {
 
 
 //MARK:- Extension for table View Functions
+@available(iOS 13.0, *)
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
    
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -9,13 +9,12 @@ import Foundation
 
 class ViewModel {
     
+    //MARK:- Vars
     var categories : [Category] = []
     var sliders : [Slider] = []
     var newoffers : [Offer] = []
-    
-    
-    var api : APIResponse?
-    
+
+//MARK:- Get Data Form API 
     func getData (completion : @escaping (Bool)->Void)  {
         BaseDataAPI.shared.getData {  [weak self](restlt) in
             switch restlt {
